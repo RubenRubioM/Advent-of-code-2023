@@ -44,6 +44,6 @@ int main()
     auto end_time = std::chrono::high_resolution_clock::now();
     auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end_time - start_time);
 
-    std::cout << std::format("The sum is: {}\n", total);
-    std::cout << std::format("Execution time: {}", duration);
+    std::cout << std::format("The sum is: {}\n", total); 
+    std::cout << std::format("Execution time: {}\n", duration); //~448us
 }

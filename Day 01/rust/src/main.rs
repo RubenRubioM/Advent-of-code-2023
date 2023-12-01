@@ -29,5 +29,5 @@ fn main() {
 
     let end_time = std::time::Instant::now();
     std::println!("The total sum is: {total}");
-    std::println!("Execution time {:?}", (end_time - start_time));
+    std::println!("Execution time {:?}", (end_time - start_time)); // ~950us
 }
