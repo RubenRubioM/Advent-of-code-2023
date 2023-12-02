@@ -20,7 +20,7 @@ fn get_calibration_value(calibration: String) -> u32 {
 
 fn main() {
     let start_time = std::time::Instant::now();
-    let file = File::open("../input.txt").unwrap();
+    let file = File::open("../input1.txt").unwrap();
     let total: u32 = io::BufReader::new(file)
         .lines()
         .map_while(Result::ok)

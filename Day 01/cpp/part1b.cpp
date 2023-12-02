@@ -25,7 +25,7 @@ int main()
 {
     auto start_time = std::chrono::high_resolution_clock::now();
 
-    std::ifstream file("../input.txt");
+    std::ifstream file("../input1.txt");
     int total{0};
     std::string line;
     while (std::getline(file, line))
