@@ -25,16 +25,16 @@ fn get_total_prize(card: String) -> u32 {
         .split_ascii_whitespace()
         .map(|number| number.trim().parse().unwrap())
         .collect();
-    let occurrences = my_numbers.iter().filter(|number|{
-        winning_numbers.iter().find(|value| value == number).is_some()
-    }).count();
+    let occurrences = my_numbers
+        .iter()
+        .filter(|number| winning_numbers.iter().any(|value| value == *number))
+        .count();
 
     if occurrences > 0 {
         2_u32.pow(occurrences as u32 - 1)
     } else {
         0
     }
-    
 }
 fn main() {
     let start_time = std::time::Instant::now();
